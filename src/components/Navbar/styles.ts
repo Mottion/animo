@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Search } from 'styled-icons/bootstrap';
-import { Menu} from 'styled-icons/boxicons-regular';
+import { Menu } from 'styled-icons/boxicons-regular';
 
 export const Container = styled.div`
   display: flex;
@@ -12,7 +12,8 @@ export const Container = styled.div`
 
   background: var(--light-black);
   border-bottom: 2px solid rgb(90 90 90 / 50%);
-  position: relative;
+  position: fixed;
+  z-index: 2;
 `;
 
 export const LeftSide = styled.div`

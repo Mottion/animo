@@ -9,7 +9,7 @@ function GenresList({genresListClassName}: GenresListProps) {
   return (
     <Container className={genresListClassName}>
       {genres.map((item, index) => (
-        <Genre href={`/generos/anime/${index + 1}`}>{item}</Genre>
+        <Genre href={`/generos/anime/${index + 1}`} key={index + 1}>{item}</Genre>
       ))}
     </Container>
   );

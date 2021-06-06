@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Sidebar from '../Sidebar';
-import GenresList from '../GenresList';
-import ProfileLinks from '../ProfileLinks';
+import Sidebar from './Sidebar';
+import GenresList from './GenresList';
+import ProfileLinks from './ProfileLinks';
 
 import { 
   Container, 
