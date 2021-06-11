@@ -10,7 +10,7 @@ interface Props {
 function AnimeCard({malID, imageURL, title, score}: Props) {
 
   return (
-    <Container style={{backgroundImage: "url(" + imageURL + ")"}} href="/" >
+    <Container style={{backgroundImage: "url(" + imageURL + ")"}} to={`anime/${malID}`} >
       <ScoreWrapper>
         <StarIcon />
         <span>{score}</span>

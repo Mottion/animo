@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { Star } from 'styled-icons/boxicons-solid';
+import { Link } from 'react-router-dom'
 
-export const Container = styled.a`
+export const Container = styled(Link)`
   width: 225px;
   height: 318px;
   position: relative;
@@ -33,4 +34,5 @@ export const TittleWrapper = styled.div`
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  color: var(--white);
 `;

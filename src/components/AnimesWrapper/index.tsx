@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import { Container } from './styles';
 
-import AnimeCard from '../AnimeCard';
+import AnimeCard from './AnimeCard';
 
 
 interface Anime {

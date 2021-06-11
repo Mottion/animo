@@ -5,9 +5,9 @@ import {
   Route,
 } from "react-router-dom";
 import Home from './pages/Home'
-import Sobre from './pages/Sobre'
 
 import GlobalStyles from './styles/GlobalStyles'
+import AnimeInfo from "./pages/AnimeInfo";
 
 function App() {
   return (
@@ -19,9 +19,7 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/Sobre">
-            <Sobre />
-          </Route>
+          <Route exact path="/anime/:id" children={<AnimeInfo />} />
         </Switch>
 
       </Router>
