@@ -32,7 +32,7 @@ function AnimeInfo() {
       <AnimeDetails id={id} />
 
         <EpsWrapper id={id} />
-        <RecomendedAnimes></RecomendedAnimes>
+        <RecomendedAnimes id={id} />
     </Container>
   );
 };
