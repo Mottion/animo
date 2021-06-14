@@ -3,7 +3,9 @@ import { Star } from 'styled-icons/boxicons-solid';
 import { Link } from 'react-router-dom'
 
 export const Container = styled(Link)`
-  width: 225px;
+  width: 100%;
+  max-width: 225px;
+  margin: 0 10px;
   height: 318px;
   position: relative;
 `;

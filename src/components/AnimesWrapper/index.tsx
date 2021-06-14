@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Carousel from 'react-elastic-carousel';
 import axios from 'axios';
-import breakPoints from '../../../utils/breakPoints'
+import breakPoints from '../../utils/breakPoints'
 
 import { Container } from './styles';
 
@@ -33,8 +33,6 @@ function AnimesWrapper({getURL, getType}: Props) {
         if(getType === "anime" && response.data.anime[i].type === "TV"){
           animesArray.push(response.data.anime[i]);
         }else if(getType === "top" && response.data.top[i].type === "TV" ){
-          animesArray.push(response.data.top[i]);
-        }else if(getType === "recommendations" && response.data.top[i].type === "TV"){
           animesArray.push(response.data.top[i]);
         }
       }

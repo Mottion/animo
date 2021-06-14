@@ -1,4 +1,4 @@
-export const breakPoints = [
+const breakPoints = [
   // +40
   {width: 10, itemsToShow: 1, itemsToScroll: 1},
   {width: 470, itemsToShow: 2, itemsToScroll: 2},
@@ -6,3 +6,5 @@ export const breakPoints = [
   {width: 940, itemsToShow: 4, itemsToScroll: 4},
   {width: 1190, itemsToShow: 5, itemsToScroll: 5},
 ]
+
+export default breakPoints;

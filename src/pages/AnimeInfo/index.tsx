@@ -1,10 +1,10 @@
 import {useParams} from "react-router-dom";
 import AnimeDetails from "../../components/AnimePage/AnimeDetails";
 import EpsWrapper from "../../components/AnimePage/EpsWrapper";
+import RecomendedAnimes from "../../components/AnimePage/RecomendedAnimes";
 
 import { 
-  Container, 
-  RecomendedAnimes 
+  Container,  
 } from './styles';
 
 interface Params {
