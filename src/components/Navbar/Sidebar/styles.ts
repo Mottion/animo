@@ -78,6 +78,7 @@ export const CloseIcon = styled(LeftArrowAlt)`
   z-index: 2;
   background: var(--black);
   border-radius: 50%;
+  cursor: pointer;
 `;
 
 export const AvatarImage = styled.img`
@@ -146,6 +147,14 @@ export const LinksWrapper = styled.div`
     display: flex;
     flex-direction: column;
     padding: 5px 0;
+
+    > p {
+      cursor: pointer;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 `;
 

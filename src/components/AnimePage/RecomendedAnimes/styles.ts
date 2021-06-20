@@ -4,11 +4,20 @@ export const Container = styled.div`
   position: relative;
   margin-top: 50px;
 
+  > h2 {
+    font-size: 1.6rem;
+    margin: 5px 0;
+    color: var(--yellow);
+  }
+
+  .rec.rec-item-wrapper{
+    max-width: 225px;
+  }
+
   .rec.rec-arrow{
     z-index: 2;
     background: var(--white);
     color: var(--black);
-    
   }
 
   .rec.rec-arrow:hover{

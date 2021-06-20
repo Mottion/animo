@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import {
   Container,
   TopSide,
@@ -50,10 +51,10 @@ function Sidebar({
       </TopSide>
 
       <LogoWrapper>
-        <a href="/" className="logo">
+        <Link to="/" className="logo">
           <img src="/animoLogo.png" alt="animo logo" />
           <h1>Animo</h1>
-        </a>
+        </Link>
       </LogoWrapper>
 
       <LinksWrapper>
@@ -61,8 +62,8 @@ function Sidebar({
           <p onClick={ () => hasProfileMenu(!profileMenu)}>Meu Perfil</p>
           <ProfileLinks profileMenuClassName={profileMenuClassName} />
         </div>
-        <a href="/">Cronograma</a>
-        <a href="/">Temporada</a>
+        <Link to="/">Cronograma</Link>
+        <Link to="/">Temporada</Link>
         <div>
           <p onClick={() => hasGenresMenu(!genresMenu)} >Generos</p>
           <GenresList genresListClassName={genresListClassName}/>

@@ -56,10 +56,10 @@ function AnimesWrapper({getURL, getType}: Props) {
         {animes.map(item => (
           <AnimeCard 
             key={item.mal_id}
-            malID={item.mal_id}
             imageURL={item.image_url}
             title={item.title}
             score={item.score}
+            pathURL={`anime/${item.mal_id}`}
           />
         )
         )}

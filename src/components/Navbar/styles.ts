@@ -13,7 +13,7 @@ export const Container = styled.div`
   background: var(--light-black);
   border-bottom: 2px solid rgb(90 90 90 / 50%);
   position: fixed;
-  z-index: 2;
+  z-index: 4;
 `;
 
 export const LeftSide = styled.div`
@@ -170,6 +170,7 @@ export const BurguerMenu = styled(Menu)`
   width: 40px;
   height: 40px;
   color: var(--gray);
+  cursor: pointer;
 
   @media (min-width: 1200px){
     display: none;

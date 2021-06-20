@@ -1,4 +1,5 @@
 import {useParams} from "react-router-dom";
+import {useEffect} from 'react';
 import AnimeDetails from "../../components/AnimePage/AnimeDetails";
 import EpsWrapper from "../../components/AnimePage/EpsWrapper";
 import RecomendedAnimes from "../../components/AnimePage/RecomendedAnimes";
@@ -23,16 +24,17 @@ interface Params {
 
 function AnimeInfo() {
   const {id}: Params  = useParams();
-  // const [recommendations, setRecommendations] = useState<Recommendations[]>([])
 
-
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [id]);
 
   return (
     <Container>
       <AnimeDetails id={id} />
 
-        <EpsWrapper id={id} />
-        <RecomendedAnimes id={id} />
+      <EpsWrapper id={id} />
+      <RecomendedAnimes id={id} />
     </Container>
   );
 };

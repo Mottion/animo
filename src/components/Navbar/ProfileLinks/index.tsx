@@ -1,4 +1,14 @@
-import { Container, LinkWrapper, UserIcon, HeartIcon, TVIcon, HistoryIcon, CheckedIcon, LogoutIcon } from './styles';
+import {Link} from 'react-router-dom';
+import { 
+  Container, 
+  LinkWrapper, 
+  UserIcon, 
+  HeartIcon, 
+  TVIcon, 
+  HistoryIcon, 
+  CheckedIcon, 
+  LogoutIcon 
+} from './styles';
 
 interface ProfileLinksProps {
   profileMenuClassName: string;
@@ -10,27 +20,27 @@ function ProfileLinks({profileMenuClassName}: ProfileLinksProps) {
     <Container className={profileMenuClassName}>
       <LinkWrapper>
         <UserIcon />
-        <a href="/">Meu Perfil</a>
+        <Link to="/myProfile/all">Meu Perfil</Link>
       </LinkWrapper>
       <LinkWrapper>
         <HeartIcon />
-        <a href="/">Meus favoritos</a>
+        <Link to="/myProfile">Meus favoritos</Link>
       </LinkWrapper>
       <LinkWrapper>
         <TVIcon />
-        <a href="/">assistindo</a>
+        <Link to="/myProfile">assistindo</Link>
       </LinkWrapper>
       <LinkWrapper>
         <HistoryIcon />
-        <a href="/">Historia</a>
+        <Link to="/myProfile">Historia</Link>
       </LinkWrapper>
       <LinkWrapper>
         <CheckedIcon />
-        <a href="/">Completos</a>
+        <Link to="/myProfile">Completos</Link>
       </LinkWrapper>
       <LinkWrapper>
         <LogoutIcon />
-        <a href="/">sair da conta</a>
+        <Link to="/myProfile">sair da conta</Link>
       </LinkWrapper>
 
     </Container>

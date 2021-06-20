@@ -4,6 +4,10 @@ import { PlayFill } from 'styled-icons/bootstrap'
 export const Container = styled.div`
   position: relative;
 
+  .rec.rec-item-wrapper {
+    width: 210px;
+  }
+
   .rec.rec-arrow{
     z-index: 2;
     background: var(--white);
@@ -54,9 +58,9 @@ export const Container = styled.div`
 export const Episode = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 210px;
   max-width: 300px;
-  margin: 0 10px;
+  padding: 0 5px;
   cursor: pointer;
 
   &:hover h4 {

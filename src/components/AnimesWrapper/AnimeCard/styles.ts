@@ -6,8 +6,13 @@ export const Container = styled(Link)`
   width: 100%;
   max-width: 225px;
   margin: 0 10px;
+  background-size: 100% 100%;
   height: 318px;
   position: relative;
+
+  &:hover{
+    border: 2px solid var(--yellow);
+  }
 `;
 
 export const ScoreWrapper = styled.div`

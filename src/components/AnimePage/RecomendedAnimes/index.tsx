@@ -33,7 +33,8 @@ function RecomendedAnimes({id}: Props) {
 
   return (
     <Container>
-      <div />
+      <h2>Animes Recomendados</h2>
+
       <Carousel
         itemsToShow={5} 
         pagination={false} 
@@ -44,9 +45,9 @@ function RecomendedAnimes({id}: Props) {
         {recommentadions?.map(item => (
           <AnimeCard 
             key={item?.mal_id}
-            malID={item?.mal_id}
             imageURL={item?.image_url}
             title={item?.title}
+            pathURL={`${item?.mal_id}`}
           />
         )
         )}

@@ -43,6 +43,6 @@ export default createGlobalStyle`
 
     font-family: "Poppins", sans-serif;
     font-weight: 500;
-    color: var(--red);
+    color: var(--yellow);
   }
 `;

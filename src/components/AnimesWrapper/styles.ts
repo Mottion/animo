@@ -2,21 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 1320px;
   padding: 0 10px;
   position: relative;
-
-  @media (max-width: 1250px){
-    max-width: 1050px;
-  }
-
-  @media (max-width: 1000px){
-    max-width: 750px;
-  }
-
-  @media (max-width: 750px){
-    max-width: 550px;
-  }
 
   .rec.rec-arrow{
     z-index: 1;

@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import {useState} from 'react';
+import {Link} from 'react-router-dom';
 import Sidebar from './Sidebar';
 import GenresList from './GenresList';
 import ProfileLinks from './ProfileLinks';
@@ -44,15 +45,15 @@ function Navbar() {
       />
 
       <LeftSide>
-        <a href="/" className="logo">
+        <Link to="/" className="logo">
           <img src="/animoLogo.png" alt="animo logo" />
           <h1>Animo</h1>
-        </a>
+        </Link>
         
         <span />
 
-        <a href="/">Cronograma</a>
-        <a href="/">Temporada</a>
+        <Link to="/">Cronograma</Link>
+        <Link to="/">Temporada</Link>
         <div className="genres" onClick={() => hasGenresMenu(!genresMenu)}>
           <p>Generos</p>
           <GenresList genresListClassName={genresListClassName}/>

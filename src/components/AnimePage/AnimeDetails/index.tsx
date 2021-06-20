@@ -44,9 +44,8 @@ function AnimeDetails({id}: Props) {
     .catch(function (error: any) {
       console.log('ocorreu um erro -> ' + error);
     });
-
-
   }, [id]);
+
 
   return (
     <Container>
