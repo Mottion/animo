@@ -6,40 +6,62 @@ import { SensorDoor } from 'styled-icons/material-rounded'
 export const Container = styled.div`
   padding: 10px 0;
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr 3fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+  "IMG PDW ASW" 
+  "IMG BIO BIO";
 
   > img {
-    width: 100%;
+    grid-area: IMG;
     height: 100%;
-    max-width: 250px;
-    max-height: 250px;
-  }
-`;
-
-export const ProfileDataWrapper = styled.div`
-  width: 100%;
-  padding: 0 10px;
-  display: flex;
-  flex-direction: column;
-
-  > div {
-    display: flex;
     width: 100%;
+    margin-right: 10px;
+  }
+
+  @media (max-width: 1120px){
+    grid-template-columns: auto 2fr 4fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+  "IMG ASW ASW" 
+  "PDW BIO BIO";
+  }
+
+  @media (max-width: 641px){
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "IMG" 
+    "PDW"
+    "ASW"
+    "BIO"
+  ;
+
+  > img {
+    max-width: 300px;
+  }
   }
 `;
 
 export const ProfileInfoWrapper = styled.div`
   display: inline-block;
-  width: 30%;
+  grid-area: PDW;
+  margin-left: 10px;
+  min-width: 260px;
 
   > p {
     font-size: 1.8rem;
+
+  }
+  @media (max-width: 1120px){
+      margin-top: 10px;
   }
 `;
 
 export const AnimeStats = styled.div`
   padding: 0 10px;
-  width: 100%;
+  grid-area: ASW;
 `;
 
 export const InfoWrapper = styled.div`
@@ -76,7 +98,7 @@ export const AboutContainer = styled.div`
   background: var(--light-black);
   border-radius: 5px;
   color: var(--gray);
-  width: 100%;
-  height: 100%;
-  margin-top: 5px;
+  margin-top: 10px;
+  margin-left: 10px;
+  grid-area: BIO;
 `;

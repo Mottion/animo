@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import StatsWrapper from './StatsWrapper';
 import { 
   Container, 
-  ProfileDataWrapper,
   ProfileInfoWrapper,
   AnimeStats, 
   InfoWrapper, 
@@ -55,53 +54,47 @@ function ProfileData() {
     <Container>
       <img src={profileData.image_url} alt="imagem do usuario" />
 
-      <ProfileDataWrapper>
-        <div>
-          <ProfileInfoWrapper>
-            <p>{profileData.username}</p>
-            
-            <InfoWrapper>
-              <GenreIcon />
-              <h4>Genero: </h4>
-              <span>{profileData.gender}</span>
-            </InfoWrapper>
-            <InfoWrapper>
-              <LocationIcon />
-              <h4>Localização: </h4>
-              <span>{profileData.location}</span>
-            </InfoWrapper>
-            <InfoWrapper>
-              <BirthdayIcon />
-              <h4>Aniversario: </h4>
-              <span>{profileData.birthday?.slice(0, 10)}</span>
-            </InfoWrapper>
-            <InfoWrapper>
-              <JoinedIcon />
-              <h4>Entrada: </h4>
-              <span>{profileData.joined?.slice(0, 10)}</span>
-            </InfoWrapper>
-          </ProfileInfoWrapper>
+        <ProfileInfoWrapper>
+          <p>{profileData.username}</p>
+          
+          <InfoWrapper>
+            <GenreIcon />
+            <h4>Genero: </h4>
+            <span>{profileData.gender}</span>
+          </InfoWrapper>
+          <InfoWrapper>
+            <LocationIcon />
+            <h4>Localização: </h4>
+            <span>{profileData.location}</span>
+          </InfoWrapper>
+          <InfoWrapper>
+            <BirthdayIcon />
+            <h4>Aniversario: </h4>
+            <span>{profileData.birthday?.slice(0, 10)}</span>
+          </InfoWrapper>
+          <InfoWrapper>
+            <JoinedIcon />
+            <h4>Entrada: </h4>
+            <span>{profileData.joined?.slice(0, 10)}</span>
+          </InfoWrapper>
+        </ProfileInfoWrapper>
 
-          <AnimeStats>
-            <StatsWrapper title="dias assistidos:" content={profileData?.anime_stats?.days_watched} />
-            <StatsWrapper title="media de voto:" content={profileData?.anime_stats?.mean_score} />
-            <StatsWrapper title="assistindo:" content={profileData?.anime_stats?.watching} />
-            <StatsWrapper title="completados:" content={profileData?.anime_stats?.completed} />
-            <StatsWrapper title="em espera:" content={profileData?.anime_stats?.on_hold} />
-            <StatsWrapper title="desistidos" content={profileData?.anime_stats?.dropped} />
-            <StatsWrapper title="plenejando assistir:" content={profileData?.anime_stats?.plan_to_watch} />
-            <StatsWrapper title="entradas totais:" content={profileData?.anime_stats?.total_entries} />
-            <StatsWrapper title="reassistidos:" content={profileData?.anime_stats?.rewatched} />
-            <StatsWrapper title="episodios assistidos:" content={profileData?.anime_stats?.episodes_watched} />
-          </AnimeStats>
-        </div>
-        <AboutContainer>
-          {profileData.about}
-        </AboutContainer>
-      </ProfileDataWrapper>
+        <AnimeStats>
+          <StatsWrapper title="dias assistidos:" content={profileData?.anime_stats?.days_watched} />
+          <StatsWrapper title="media de voto:" content={profileData?.anime_stats?.mean_score} />
+          <StatsWrapper title="assistindo:" content={profileData?.anime_stats?.watching} />
+          <StatsWrapper title="completados:" content={profileData?.anime_stats?.completed} />
+          <StatsWrapper title="em espera:" content={profileData?.anime_stats?.on_hold} />
+          <StatsWrapper title="desistidos" content={profileData?.anime_stats?.dropped} />
+          <StatsWrapper title="plenejando assistir:" content={profileData?.anime_stats?.plan_to_watch} />
+          <StatsWrapper title="entradas totais:" content={profileData?.anime_stats?.total_entries} />
+          <StatsWrapper title="reassistidos:" content={profileData?.anime_stats?.rewatched} />
+          <StatsWrapper title="episodios assistidos:" content={profileData?.anime_stats?.episodes_watched} />
+        </AnimeStats>
+
+      <AboutContainer>{profileData.about}</AboutContainer>
     </Container>
   )
-  
 
 };
 

@@ -14,7 +14,6 @@ function ProfilePage() {
     <Container>
       <ProfileData />
 
-
     </Container>
   );
 };
