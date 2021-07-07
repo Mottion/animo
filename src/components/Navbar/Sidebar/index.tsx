@@ -1,3 +1,4 @@
+import { FormEvent } from 'react'; 
 import {Link} from 'react-router-dom';
 import {
   Container,
@@ -24,6 +25,9 @@ interface SidebarProps{
   genresListClassName: string;
   hasGenresMenu: (genresMenu: boolean) => void;
   genresMenu: boolean;
+  setSearch: (search: string) => void;
+  search: string;
+  handleSearch: (event: FormEvent) => void;
 }
 
 function Sidebar({
@@ -34,16 +38,24 @@ function Sidebar({
   profileMenuClassName,
   genresListClassName,
   hasGenresMenu,
-  genresMenu
+  genresMenu,
+  setSearch,
+  search,
+  handleSearch
 }: SidebarProps) {
   const className = hasMobileMenu? 'active' : '';
   
   return (
     <Container className={className}>
       <TopSide>
-        <SearchForm>
+        <SearchForm onSubmit={handleSearch}>
           <SearchIcon />
-          <SearchInput placeholder="pesquisar" type="text" />
+          <SearchInput 
+            placeholder="pesquisar" 
+            type="text" 
+            onChange={event => setSearch(event.target.value)}
+            value={search}
+          />
         </SearchForm>
         <CloseIcon onClick={toggleMenu} />
         <AvatarImage src="/profileImage.jpg" />

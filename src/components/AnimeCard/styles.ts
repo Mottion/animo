@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 export const Container = styled(Link)`
   width: 100%;
   max-width: 225px;
-  margin: 0 10px;
+  margin: 5px 10px;
   background-size: 100% 100%;
   height: 318px;
   position: relative;
@@ -23,6 +23,7 @@ export const ScoreWrapper = styled.div`
   align-items: flex-end;
   color: var(--yellow);
   background: #08070873;
+  font-size: 1.3rem;
   
 `;
 

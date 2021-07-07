@@ -1,8 +1,8 @@
 import Carousel from 'react-elastic-carousel';
-import breakPoints from '../../../utils/breakPoints'
+import breakPoints from '../../utils/breakPoints'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import AnimeCard from '../../AnimesWrapper/AnimeCard'
+import AnimeCard from '../AnimeCard'
 
 import { Container } from './styles';
 
@@ -47,7 +47,7 @@ function RecomendedAnimes({id}: Props) {
             key={item?.mal_id}
             imageURL={item?.image_url}
             title={item?.title}
-            pathURL={`${item?.mal_id}`}
+            mal_id={item?.mal_id}
           />
         )
         )}

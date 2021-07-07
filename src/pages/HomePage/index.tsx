@@ -2,7 +2,7 @@ import { Container } from './styles';
 import AnimesWrapper from '../../components/AnimesWrapper';
 
 
-function Home() {
+function HomePage() {
 
   return (
     <Container>
@@ -26,4 +26,4 @@ function Home() {
   );
 };
 
-export default Home;
+export default HomePage;

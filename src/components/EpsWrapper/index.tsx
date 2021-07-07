@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Carousel from 'react-elastic-carousel';
 import axios from 'axios';
-import breakPoints from '../../../utils/breakPoints'
+import breakPoints from '../../utils/breakPoints';
 
 import { Container, Episode, Video, PlayIcon } from './styles';
 

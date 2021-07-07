@@ -1,8 +1,8 @@
 import {useParams} from "react-router-dom";
 import {useEffect} from 'react';
-import AnimeDetails from "../../components/AnimePage/AnimeDetails";
-import EpsWrapper from "../../components/AnimePage/EpsWrapper";
-import RecomendedAnimes from "../../components/AnimePage/RecomendedAnimes";
+import AnimeDetails from "../../components/AnimeDetails";
+import EpsWrapper from "../../components/EpsWrapper";
+import RecomendedAnimes from "../../components/RecomendedAnimes";
 
 import { 
   Container,  
@@ -13,16 +13,7 @@ interface Params {
 }
 
 
-
-
-// interface Recommendations {
-//   mal_id: number;
-//   image_url: string;
-//   title: string;
-// }
-
-
-function AnimeInfo() {
+function AnimePage() {
   const {id}: Params  = useParams();
 
   useEffect(() => {
@@ -39,4 +30,4 @@ function AnimeInfo() {
   );
 };
 
-export default AnimeInfo;
+export default AnimePage;

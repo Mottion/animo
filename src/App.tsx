@@ -4,9 +4,10 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import Home from './pages/Home'
-import AnimeInfo from "./pages/AnimeInfo";
+import HomePage from './pages/HomePage'
+import AnimePage from "./pages/AnimePage";
 import ProfilePage from "./pages/ProfilePage";
+import SearchPage from "./pages/SearchPage";
 
 import GlobalStyles from './styles/GlobalStyles'
 
@@ -17,9 +18,10 @@ function App() {
         <Navbar />
 
         <Switch>
-          <Route exact path="/" children={<Home />} />
-          <Route exact path="/anime/:id" children={<AnimeInfo />} />
-          <Route exact path="/myProfile/:info" children={<ProfilePage />} />
+          <Route exact path="/" children={<HomePage />} />
+          <Route exact path="/anime/:id" children={<AnimePage />} />
+          <Route exact path="/myProfile/:type" children={<ProfilePage />} />
+          <Route exact path="/search/:name" children={<SearchPage />} />
         </Switch>
 
       </Router>

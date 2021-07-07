@@ -3,14 +3,14 @@ import { Container, ScoreWrapper, StarIcon, TittleWrapper } from './styles';
 interface Props {
   imageURL: string;
   title: string;
-  pathURL: string;
+  mal_id: number;
   score?: number;
 }
 
-function AnimeCard({ imageURL, title, pathURL, score}: Props) {
+function AnimeCard({ imageURL, title, mal_id, score}: Props) {
 
   return (
-    <Container style={{backgroundImage: "url(" + imageURL + ")"}} to={pathURL} >
+    <Container style={{backgroundImage: "url(" + imageURL + ")"}} to={`/anime/${mal_id}`} >
       {score &&
         <ScoreWrapper>
           <StarIcon /> 

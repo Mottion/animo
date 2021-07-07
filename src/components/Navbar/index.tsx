@@ -1,5 +1,5 @@
-import {useState} from 'react';
-import {Link} from 'react-router-dom';
+import {FormEvent, useState} from 'react';
+import {Link, useHistory} from 'react-router-dom';
 import Sidebar from './Sidebar';
 import GenresList from './GenresList';
 import ProfileLinks from './ProfileLinks';
@@ -23,12 +23,19 @@ function Navbar() {
   const [hasMobileMenu, setHasMobileMenu] = useState(false);
   const [profileMenu, hasProfileMenu] = useState(false);
   const [genresMenu, hasGenresMenu] = useState(false);
+  const [search, setSearch] = useState('');
+  const history = useHistory()
 
   const profileMenuClassName = profileMenu ? 'active' : '';
   const genresListClassName = genresMenu ? 'active' : '';
 
   function toggleMenu() {
     setHasMobileMenu(!hasMobileMenu);
+  }
+
+  function handleSearch(event: FormEvent) {
+    event.preventDefault();
+    history.push(`/search/${search}`)
   }
 
   return (
@@ -42,6 +49,9 @@ function Navbar() {
         genresListClassName={genresListClassName}
         hasGenresMenu={hasGenresMenu}
         genresMenu={genresMenu}
+        setSearch={setSearch}
+        search={search}
+        handleSearch={handleSearch}
       />
 
       <LeftSide>
@@ -62,9 +72,14 @@ function Navbar() {
       </LeftSide>
 
       <RightSide>
-        <SearchForm>
+        <SearchForm onSubmit={event => handleSearch(event)}>
           <SearchIcon />
-          <SearchInput placeholder="pesquisar" type="text" />
+          <SearchInput 
+            placeholder="pesquisar" 
+            type="text" 
+            onChange={event => setSearch(event.target.value)}
+            value={search}
+          />
         </SearchForm>
 
         <Profile>

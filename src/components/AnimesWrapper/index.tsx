@@ -5,7 +5,7 @@ import breakPoints from '../../utils/breakPoints'
 
 import { Container } from './styles';
 
-import AnimeCard from './AnimeCard';
+import AnimeCard from '../AnimeCard';
 
 
 interface Anime {
@@ -59,7 +59,7 @@ function AnimesWrapper({getURL, getType}: Props) {
             imageURL={item.image_url}
             title={item.title}
             score={item.score}
-            pathURL={`anime/${item.mal_id}`}
+            mal_id={item.mal_id}
           />
         )
         )}

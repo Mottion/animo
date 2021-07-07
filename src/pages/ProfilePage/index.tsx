@@ -1,18 +1,18 @@
 import {useParams} from "react-router-dom";
 
-import ProfileData from '../../components/ProfilePage/ProfileData';
+import ProfileData from '../../components/ProfileData';
+import UserAnimes from '../../components/UserAnimes';
 import { Container } from './styles';
 
-interface Params {
-  info: string;
-}
 
 function ProfilePage() {
-  const { info }: Params  = useParams();
+  const { type }: {type: string} = useParams();
   
   return (
     <Container>
       <ProfileData />
+
+      <UserAnimes type={type} />
 
     </Container>
   );

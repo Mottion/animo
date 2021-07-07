@@ -28,7 +28,7 @@ function ProfileLinks({profileMenuClassName}: ProfileLinksProps) {
       </LinkWrapper>
       <LinkWrapper>
         <TVIcon />
-        <Link to="/myProfile">assistindo</Link>
+        <Link to="/myProfile/watching">assistindo</Link>
       </LinkWrapper>
       <LinkWrapper>
         <HistoryIcon />
@@ -36,7 +36,7 @@ function ProfileLinks({profileMenuClassName}: ProfileLinksProps) {
       </LinkWrapper>
       <LinkWrapper>
         <CheckedIcon />
-        <Link to="/myProfile">Completos</Link>
+        <Link to="/myProfile/completed">Completos</Link>
       </LinkWrapper>
       <LinkWrapper>
         <LogoutIcon />

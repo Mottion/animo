@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
-import StatsWrapper from './StatsWrapper';
+import StatsWrapper from '../StatsWrapper';
 import { 
   Container, 
   ProfileInfoWrapper,

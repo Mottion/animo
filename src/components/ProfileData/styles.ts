@@ -29,19 +29,28 @@ export const Container = styled.div`
   }
 
   @media (max-width: 641px){
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "IMG ASW" 
+    "PDW ASW"
+    "BIO BIO";
+  }
+
+  @media (max-width: 520px){
     grid-template-columns: auto;
     grid-template-rows: auto auto auto auto;
     grid-template-areas: 
     "IMG" 
     "PDW"
     "ASW"
-    "BIO"
-  ;
+    "BIO";
+  }
 
   > img {
     max-width: 300px;
   }
-  }
+  
 `;
 
 export const ProfileInfoWrapper = styled.div`
